@@ -10,7 +10,7 @@ This image build is based on the docker image of faveo-docker-php so it does not
 
 run the image from the repository
 
-docker run -d --name invoice-faveo -e "DATBASE_TYPE=mysql" -e "DATBASE_HOST=db" -e "DATBASE_NAME=faveo" -e "DATBASE_USER=faveo" -e "DATBASE_PASSWORD=faveo" -p 80:80 ladybirdweb/faveo-docker
+<docker run -d --name invoice-faveo -e "DATBASE_TYPE=mysql" -e "DATBASE_HOST=db" -e "DATBASE_NAME=faveo" -e "DATBASE_USER=faveo" -e "DATBASE_PASSWORD=faveo" -p 80:80 ladybirdweb/faveo-docker>
 
 These are the default environment variables. Change the values to your server credentials.
 
