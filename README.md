@@ -10,7 +10,7 @@ This image build is based on the docker image of faveo-docker-php so it does not
 
 run the image from the repository
 
-<docker run -d --name invoice-faveo -e "DATBASE_TYPE=mysql" -e "DATBASE_HOST=db" -e "DATBASE_NAME=faveo" -e "DATBASE_USER=faveo" -e "DATBASE_PASSWORD=faveo" -p 80:80 ladybirdweb/faveo-docker>
+```docker run -d --name invoice-faveo -e "DATBASE_TYPE=mysql" -e "DATBASE_HOST=db" -e "DATBASE_NAME=faveo" -e "DATBASE_USER=faveo" -e "DATBASE_PASSWORD=faveo" -p 80:80 ladybirdweb/faveo-docker```
 
 These are the default environment variables. Change the values to your server credentials.
 
@@ -18,13 +18,13 @@ These are the default environment variables. Change the values to your server cr
 
 You first need to initialize the database container with a name.
 
-docker run --name some-db-name -e MYSQL_ROOT_PASSWORD=root -P -d mysql
+```docker run --name some-db-name -e MYSQL_ROOT_PASSWORD=root -P -d mysql```
 
-After that, you need to connect to your mysql container and execute the sql that is recommended by Faveo HELPDESK developers. You find a copy in this repository (database-setup.sql)
+After that, you need to connect to your mysql container and execute the sql that is recommended by ```Faveo HELPDESK``` developers. You find a copy in this repository (database-setup.sql)
 
 Now you can start your invoice docker container
 
-docker run -d --name faveo-helpdesk --link some-db-name:db -p 80:80 ladybirdweb/faveo-helpdesk;
+```docker run -d --name faveo-helpdesk --link some-db-name:db -p 80:80 ladybirdweb/faveo-helpdesk;```
 
 Thats it your Faveo HELPDESK container is running.
 
