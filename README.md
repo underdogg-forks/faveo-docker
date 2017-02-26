@@ -31,36 +31,9 @@ After changing nginx config rebuild the image.
 
 Now start the server using your own local image by changing the docker-compose file with your repo name as image under faveo:
 
-version: '2'
-
-services:
-   mysql:
-     image: mysql:latest
-     container_name: mysql
-     restart: always
-     volumes:
-       - db_data:/var/lib/mysql
-     environment:
-       MYSQL_ROOT_PASSWORD: faveo
-       MYSQL_DATABASE: faveo
-       MYSQL_USER: faveo
-       MYSQL_PASSWORD: faveo
-     ports:
-       - "3306:3306"
-
-   faveo:
-     container_name: faveo
-     depends_on:
-       - mysql
-     image: "repo_name"
-     ports:
-       - "80:80"
-     restart: always
-
-
-volumes:
-    db_data:
-
-
+<code>
+  faveo:
+    image: repo_name
+</code>
 
 
