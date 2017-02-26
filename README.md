@@ -10,7 +10,7 @@ Make sure you have docker-compose installed on your server.
 
 Run the following command to start Faveo and mySQL image:
 
-''''docker-compose up -d''''
+<code>docker-compose up -d</code>
 
 Open you ip address for fininshing Faveo installation.
 
