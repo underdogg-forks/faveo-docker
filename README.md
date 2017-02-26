@@ -15,4 +15,6 @@ Run the following command to start Faveo and mySQL image:
 Open you ip address for fininshing Faveo installation.
 
 
-<h1>To change the nginx config image for your server edit defaul.config</h1>
+<h3>To change the nginx config image for your server edit defaul.config</h3>
+
+
