@@ -1,6 +1,6 @@
 FROM nginx
 
-MAINTAINER Himanshu Verma
+MAINTAINER Himanshu Verma <himanshu@attabot.io>
 
 # Install necessary packages 
 
