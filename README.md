@@ -32,8 +32,8 @@ After changing nginx config rebuild the image.
 Now start the server using your own local image by changing the docker-compose file with your repo name as image under faveo:
 
 <code>
-  faveo:
-    image: repo_name
+  faveo:</code><br>
+  <code>    image: repo_name
 </code>
 
 
