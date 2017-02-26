@@ -4,7 +4,15 @@ With this Docker file you can build a Docker image for Faveo HELPDESK
 
 <h3>How to use</h3>
 
-This image build is based on the docker image of faveo-docker-php so it does not provide a mysql server. To use the image there are several ways.
+Clone the repository. 
+
+Make sure you have docker-compose installed on your server. 
+
+Run the following command to start Faveo and mySQL image:
+
+''''docker-compose up -d''''
+
+Open you ip address for fininshing Faveo installation.
 
 <h3>Use a Remote Database host</h3>
 
