@@ -1,6 +1,6 @@
 <h3>Docker file for Faveo HELPDESK</h3>
 
-With this Docker file you can build a Docker image for Faveo HELPDESK
+With this Docker file you can build a Docker image for Faveo Helpdesk
 
 <h3>How to use</h3>
 
