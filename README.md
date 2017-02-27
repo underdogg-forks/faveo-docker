@@ -33,6 +33,8 @@ Now start the server using your own local image by changing the docker-compose f
 
        faveo:
           image: repo_name
-       
+
+<h3>Documentation</h3>
+https://docs.google.com/document/d/1l2QyGGtxSm1ta-2qCkw7A3G74UqUKSPi8fgBCblRbqA
 
 
