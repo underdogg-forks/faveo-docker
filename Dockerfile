@@ -29,6 +29,7 @@ WORKDIR /usr/share/nginx/
 
 RUN rm -rf *
 
+# Clone the project from git
 RUN git clone https://github.com/ladybirdweb/faveo-helpdesk.git .
 
 RUN composer install
