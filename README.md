@@ -1,4 +1,4 @@
-<h3>Docker file for Faveo HELPDESK</h3>
+<h3>Docker file for Faveo Helpdesk</h3>
 
 With this Docker file you can build a Docker image for Faveo Helpdesk
 
@@ -39,4 +39,4 @@ https://docs.google.com/document/d/1l2QyGGtxSm1ta-2qCkw7A3G74UqUKSPi8fgBCblRbqA
 
 
 <h3>Reference</h3>
-https://hub.docker.com/r/ladybirdweb/faveo-helpdesk/
+https://hub.docker.com/r/ladybirdweb/faveo-docker/
