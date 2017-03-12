@@ -34,6 +34,13 @@ Now start the server using your own local image by changing the docker-compose f
        faveo:
           image: repo_name
 
+Contributing
+--------------------------
+Create your own fork of Faveo master repositoray and use <a href="https://github.com/nvie/gitflow">git-flow</a> to create a new feature. Once the feature is published in your fork, send a pull request to begin the conversation of integrating your new feature into Faveo.
+
+Help
+--------------------------
+Visit the <a href="https://github.com/ladybirdweb/faveo-helpdesk/issues">issue</a> page. And if you'd like professional help commercial support is available, email us through the <a href="http://www.faveohelpdesk.com/contact-us/">contact form</a>.
 <h3>Documentation</h3>
 https://docs.google.com/document/d/1l2QyGGtxSm1ta-2qCkw7A3G74UqUKSPi8fgBCblRbqA
 
