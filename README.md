@@ -10,7 +10,7 @@ Make sure you have docker-compose installed on your server.
 
 Run the following command to start Faveo and mySQL image:
 
-<code>docker-compose up -d</code>
+`docker-compose up -d`
 
 Open you ip address for fininshing Faveo installation.
 
@@ -27,7 +27,7 @@ You can change the environment variables for database configuration.
 
 After changing nginx config rebuild the image.
 
-<code>docker build -it "repo_name" .</code>
+`docker build -it "repo_name" .`
 
 Now start the server using your own local image by changing the docker-compose file with your repo name as image under faveo:
 
