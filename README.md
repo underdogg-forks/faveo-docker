@@ -46,5 +46,5 @@ https://docs.google.com/document/d/1l2QyGGtxSm1ta-2qCkw7A3G74UqUKSPi8fgBCblRbqA
 
 
 <h3>Reference</h3>
-- https://hub.docker.com/r/ladybirdweb/faveo-docker/
+- https://hub.docker.com/r/ladybirdweb/faveo-docker
 - https://github.com/ladybirdweb/faveo-server-images
