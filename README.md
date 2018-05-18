@@ -23,7 +23,7 @@ When asked about database config. Use the same credentials as in docker-compose.
 
 You can change the environment variables for database configuration.
 
-### To change the nginx config image for your server edit defaul.conf
+### To change the nginx config image for your server edit default.conf
 
 After changing nginx config rebuild the image.
 
