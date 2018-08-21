@@ -1,6 +1,6 @@
-FROM nginx
+FROM nginx:1.11.10
 
-MAINTAINER Himanshu Verma <himanshu@attabot.io>
+MAINTAINER Ladybird Web Solutions <support@ladybirdweb.com>
 
 # Install necessary packages 
 
@@ -31,6 +31,7 @@ RUN rm -rf *
 
 # Clone the project from git
 RUN git clone https://github.com/ladybirdweb/faveo-helpdesk.git .
+RUN git checkout tags/v1.9.6
 
 RUN composer install
 RUN chgrp -R www-data . storage bootstrap/cache
