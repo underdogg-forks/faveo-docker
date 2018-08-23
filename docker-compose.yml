@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 
 services:
    mysql:
@@ -19,7 +19,7 @@ services:
      container_name: faveo
      depends_on:
        - mysql
-     image: faveo-dock2.0
+     image: ladybirdweb/faveo-docker:2.0
      links:
        - mysql:mysql
      ports:
