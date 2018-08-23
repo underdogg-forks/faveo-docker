@@ -19,7 +19,9 @@ services:
      container_name: faveo
      depends_on:
        - mysql
-     image: ladybirdweb/faveo-docker
+     image: faveo-dock2.0
+     links:
+       - mysql:mysql
      ports:
        - "80:80"
      restart: always

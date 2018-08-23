@@ -1,15 +1,20 @@
-FROM nginx:1.11.10
+FROM nginx
 
 MAINTAINER Ladybird Web Solutions <support@ladybirdweb.com>
 
 # Install necessary packages 
+RUN apt-get update -y && apt-get install -y apt-transport-https ca-certificates wget
 
-RUN apt-get update -y && apt-get install -y curl git \
-  php5-fpm php5-mcrypt  \
-	php5-intl php-apc php5-gd php5-intl php5-mysql php5-pgsql php5-curl \
-	php5-xmlrpc php5-imap php-pear php5-cli cron && rm -rf /var/lib/apt/lists/*
+RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 
-RUN php5enmod mcrypt
+RUN echo "deb https://packages.sury.org/php/ jessie main" > /etc/apt/sources.list.d/php.list
+
+
+RUN apt-get update -y && apt-get install -y curl git sl mlocate dos2unix \
+    bash-completion openssl php7.1-xml php7.1-mbstring php7.1-zip php7.1-mysql \
+    php7.1-opcache php7.1-json php7.1-curl php7.1-ldap php7.1-cgi php7.1-imap \
+    php7.1-cli php7.1-fpm php7.1-common php7.1-bcmath libapache2-mod-php7.1 \
+    cron && rm -rf /var/lib/apt/lists/*
 
 RUN curl -sS https://getcomposer.org/installer | php && \
 		mv composer.phar /usr/local/bin/composer
@@ -17,7 +22,7 @@ RUN curl -sS https://getcomposer.org/installer | php && \
 RUN sed -i 's/user  nginx/user  www-data/g' /etc/nginx/nginx.conf
 
 # Force PHP to log to nginx
-RUN echo "catch_workers_output = yes" >> /etc/php5/fpm/php-fpm.conf
+RUN echo "catch_workers_output = yes" >> /etc/php/7.1/fpm/php-fpm.conf
 
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
         && ln -sf /dev/stderr /var/log/nginx/error.log
@@ -31,7 +36,6 @@ RUN rm -rf *
 
 # Clone the project from git
 RUN git clone https://github.com/ladybirdweb/faveo-helpdesk.git .
-RUN git checkout tags/v1.9.6
 
 RUN composer install
 RUN chgrp -R www-data . storage bootstrap/cache
@@ -47,6 +51,8 @@ RUN chmod 0644 /etc/cron.d/faveo-cron
 
 RUN crontab /etc/cron.d/faveo-cron
 
-RUN sed -i "s/max_execution_time = .*/max_execution_time = 120/" /etc/php5/fpm/php.ini
+RUN sed -i "s/max_execution_time = .*/max_execution_time = 120/" /etc/php/7.1/fpm/php.ini
 
-CMD cron && service php5-fpm start && nginx -g "daemon off;"
+RUN php -m
+
+CMD cron && service php7.1-fpm start && nginx -g "daemon off;"
