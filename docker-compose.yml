@@ -19,7 +19,11 @@ services:
      container_name: faveo
      depends_on:
        - mysql
-     image: ladybirdweb/faveo-docker
+
+
+     #image: ladybirdweb/faveo-docker
+     build:
+       context: .
      links:
        - mysql:mysql
      ports:
